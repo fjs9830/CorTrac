@@ -3,21 +3,7 @@
 <html>
 
 <body>
-
-<h1>Search</h1>
-
-<!--Sends the user back to the mainpage -->
-<form action="https://fjs9830.github.io/CorTrac/mainpage">
-    <input type="submit" value="Back" />
-</form>
-
-<iframe id="inlineFrameExample"
-    title="Known Mental Disorders"
-    width="750"
-    height="750"
-    src="https://en.wikipedia.org/wiki/List_of_mental_disorders">
-</iframe>
-<script>
+    <script>
       function search_term()
         {
         term=prompt("What illness are you looking for?");
@@ -37,6 +23,20 @@
             window.location.href = 'https://en.wikipedia.org/wiki/'+term;
         }
   </script>
+
+<h1>Search</h1>
+
+<!--Sends the user back to the mainpage -->
+<form action="https://fjs9830.github.io/CorTrac/mainpage">
+    <input type="submit" value="Back" />
+</form>
+
+<iframe id="inlineFrameExample"
+    title="Known Mental Disorders"
+    width="750"
+    height="750"
+    src="https://en.wikipedia.org/wiki/List_of_mental_disorders">
+</iframe>
 </body>
 
 </html>
