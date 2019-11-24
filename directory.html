@@ -17,7 +17,26 @@
     height="750"
     src="https://en.wikipedia.org/wiki/List_of_mental_disorders">
 </iframe>
-
+<script>
+      function search_term()
+        {
+        term=prompt("What illness are you looking for?");
+        termArr=term.split(" ");
+        term="";
+        for (i = 0; i < termArr.length; i++) {
+            term=term+termArr[i]+"_";
+        }
+        term = term.slice(0, -1); 
+        return term;
+        }
+        term=search_term();
+        letter=term[0].toUpperCase();
+        term = term.substring(1);
+        term=letter+term;
+        if (term.length != 0){
+            window.location.href = 'https://en.wikipedia.org/wiki/'+term;
+        }
+  </script>
 </body>
 
 </html>
