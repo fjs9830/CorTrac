@@ -26,38 +26,42 @@
 originalQuestions = ["I feel sad and low energy very often."];
 depressionQuestions = ["I feel suicidal often.", "I don't find myself enjoying the things I used to.", "I have been regularly sad for over six months.", "I rarely have the energy to do anything."];
 anxietyQuestions = []
-console.log("Please rate the following statements 1-5, 1 being low and 5 high.");
+//console.log("Please rate the following statements 1-5, 1 being low and 5 high.");
+function test(mentalQuestions,original,name){
 miniMat = [];
 ticks = 0;
 number = 0;
-q1 = questions(originalQuestions, 0);
+q1 = questions(original, 0);
 if (q1 >= 3) {
   miniMat.push(q1);
-  while (ticks + 1 <= depressionQuestions.length) {
-    questions(depressionQuestions, ticks);
+  while (ticks + 1 <= mentalQuestions.length) {
+    question=questions(mentalQuestions, ticks);
     ticks++;
     miniMat.push(question);
   }
   ticks = 0;
 }
-while (ticks <= depressionQuestions.length) {
+while (ticks <= mentalQuestions.length) {
   number = number + miniMat[ticks];
   ticks++;
 }
-number = number / (depressionQuestions.length + 1);
+number = number / (mentalQuestions.length + 1);
 if(isNaN(number)==true){
 number=q1;
 }
-document.body.innerHTML = "<h1>Depression score is " + number + " out of 5</h1>";
 if(number>3&&number<=4){
-        document.body.innerHTML = "<h1>You may have moderate depression.</h1>";
+        document.body.innerHTML = "<h1>Your score is "+number+" out of 5, you may have moderate "+ name+".</h1>";
 }
 if(number>4){
-    document.body.innerHTML = "<h1>You may have severe depression.</h1>";
-}
+    document.body.innerHTML = "<h1>Your score is "+number+" out of 5, you may have severe "+ name+".</h1>";
+
 if(number<3){
-    document.body.innerHTML ="<h1>You likely do not have depression.</h1>"
+    document.body.innerHTML = "<h1>Your score is "+number+" out of 5, you likely do not have "+ name+".</h1>";
+
 }
+}
+}
+test(depressionQuestions,originalQuestions,"depression");
 
          
     </script>
