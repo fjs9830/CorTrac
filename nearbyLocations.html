@@ -11,16 +11,18 @@
     <input type="submit" value="Back" />
 </form>
 <span id="address"> Mental Health Facilities </span>
-<iframe width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-    <script>
-      function setUpMap()
-        {
-        var q=encodeURIComponent($('#address').text());
+<iframe id="map" width="600" height="450"></iframe>
+<script  type="text/javascript">
+jQuery(
+  function($)
+  {
+       var q=encodeURIComponent($('#address').text());
        $('#map')
         .attr('src',
-             'https://www.google.com/maps/embed/v1/place?key=AIzaSyCoiF1SlcuQPqoRdbP58ZCi3YrPx4wvMfg&q='+q);
-        }
-  </script>
+             'https://www.google.com/maps/embed/v1/place?key=***&q='+q);
+  }
+);
+</script>
 
 </body>
 
