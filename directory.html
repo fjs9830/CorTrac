@@ -26,7 +26,8 @@
         term = term.substring(1);
         term=letter+term;
         if (term.length != 0){
-            window.location.href = 'https://en.wikipedia.org/wiki/'+term;
+            var win = window.open('https://en.wikipedia.org/wiki/'+term, '_blank');
+            win.focus(); ;
         }
   </script>
 
