@@ -9,10 +9,7 @@
 <img src="https://sabercathost.com/9DN4/psyc.jpeg" alt="Seth Brown" height="75" width="150">
 <p>Seth Brown is our expert counselor in residence.  He has over 22 years in his field!  Contact him over chat below.</p>
 <!--Sends the user back to the mainpage -->
-<form action="https://fjs9830.github.io/CorTrac/mainpage">
-    <input type="submit" value="Back" />
-</form>
-
+<button onclick="window.location.href = 'https://fjs9830.github.io/CorTrac/mainpage';">Back</button>
 </body>
 
 </html>
