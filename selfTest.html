@@ -27,12 +27,11 @@ originalQuestions = ["I feel sad and low energy very often.","I am exceptionally
 depressionQuestions = ["I feel suicidal often.", "I don't find myself enjoying the things I used to.", "I have been regularly sad for over six months.", "I rarely have the energy to do anything."];
 anxietyQuestions = ["I have had a panic attack recently.","The thought of talking to people scares me.","Fear of social interaction occupies much of my thoughts."]
 original_counter=0
-//console.log("Please rate the following statements 1-5, 1 being low and 5 high.");
 function test(mentalQuestions,original,name){
 miniMat = [];
 ticks = 0;
 number = 0;
-q1 = questions(original[original_counter], 0);
+q1 = questions(original, original_counter);
 if (q1 >= 3) {
   miniMat.push(q1);
   while (ticks + 1 <= mentalQuestions.length) {
